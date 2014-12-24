@@ -18,13 +18,17 @@ Or install it yourself as:
 
     $ gem install open_weather_map
 
+## Configuration
+
+    OpenWeatherMap.configure do |c| 
+      c.api_key = api_key
+    end
+
 ## Usage
 
-		OpenWeatherMap.configure do |c| 
-			c.api_key = api_key
-		end
-		
-		OpenWeatherMap::Weather.new.coordinates(latitude: 35, longitude: 139)
+### Retrieve current weather data by geographic coordinates
+
+    OpenWeatherMap::Weather.new.coordinates(latitude: 35, longitude: 139)
 
 ## Contributing
 
